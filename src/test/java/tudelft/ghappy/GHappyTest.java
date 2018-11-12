@@ -15,7 +15,7 @@ public class GHappyTest {
             "xxggyygxx,false",
             "g,false",
             "ggg,true"})
-    public void testMirror (String input, String expected) {
+    public void testGHappy (String input, String expected) {
         GHappy happy = new GHappy();
         boolean result = happy.gHappy(input);
 
