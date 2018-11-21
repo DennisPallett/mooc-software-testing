@@ -17,4 +17,22 @@ public class CountLettersTest {
         Assertions.assertEquals(1, words);
     }
 
+    @Test
+    public void multipleMatchingWordsWithR() {
+        int words = new CountLetters().count("pear|dogs");
+        Assertions.assertEquals(2, words);
+    }
+
+    @Test
+    public void matchSingleWordWithR() {
+        int words = new CountLetters().count("pear");
+        Assertions.assertEquals(1, words);
+    }
+
+    @Test
+    public void onlyANonLetter() {
+        int words = new CountLetters().count("|");
+        Assertions.assertEquals(0, words);
+    }
+
 }
